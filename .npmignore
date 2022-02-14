@@ -26,3 +26,5 @@ tools
 
 # sample
 /sample
+
+src/**/node_modules
