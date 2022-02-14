@@ -1,6 +1,6 @@
 {
   "name": "@kunlunjs/schematics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kunlun architecture element generation based on Angular schematics 🎬",
   "main": "dist/index.js",
   "files": ["dist/**/*"],
