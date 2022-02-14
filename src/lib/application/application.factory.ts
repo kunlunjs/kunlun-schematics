@@ -37,7 +37,7 @@ function transform(options: ApplicationOptions): ApplicationOptions {
     : DEFAULT_DESCRIPTION
   // target.language = !!target.language ? target.language : DEFAULT_LANGUAGE
   target.name = resolvePackageName(target.name)
-  target.type = !!target.type ? target.type : 'React'
+  target.type = !!target.type ? target.type : 'react'
   target.version = !target.version ? target.version : DEFAULT_VERSION
 
   target.packageManager =

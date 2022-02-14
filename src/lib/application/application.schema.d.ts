@@ -4,7 +4,7 @@ export interface ApplicationOptions {
    */
   name: string
   /**
-   * Kunlun Application type: React | Vue | Nest-Prisma-RESTful
+   * Kunlun Application type: react | vue | nest-prisma-restful | nest-prisma-graphql
    */
   type?: string
   /**
