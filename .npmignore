@@ -1,5 +1,11 @@
 .idea/
 .gitignore
+.commitlintrc.js
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.lintstagedrc.js
+.prettierignore
 .prettierrc
 .travis.yml
 Makefile
@@ -28,3 +34,4 @@ tools
 /sample
 
 src/**/node_modules
+pnpm-lock.yaml
