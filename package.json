@@ -1,7 +1,7 @@
 {
   "name": "@kunlunjs/schematics",
   "version": "0.0.5",
-  "description": "Kunlun architecture element generation based on Angular schematics 🎬",
+  "description": "Kunlun - modern, fast, powerful fullstack framework (@schematics)",
   "main": "dist/index.js",
   "files": ["dist/**/*"],
   "publishConfig": {
@@ -30,7 +30,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "contributors": ["Yudong Zhu <zhuyudong@aliyun.com>"],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/turing-fe/kunlun-schematics/issues"
   },
@@ -74,5 +75,15 @@
     "fs-extra": "^10.0.0",
     "jsonc-parser": "^3.0.0",
     "pluralize": "^8.0.0"
+  },
+  "schematics": "./dist/collection.json",
+  "nyc": {
+    "include": ["src"],
+    "exclude": ["node_modules", "test"],
+    "extension": [".ts"],
+    "require": ["ts-node/register"],
+    "reporter": ["text-summary", "html"],
+    "sourceMap": true,
+    "instrument": true
   }
 }
