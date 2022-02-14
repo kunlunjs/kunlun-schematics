@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    // "strictNullChecks": <%= strict %>,
+    // "noImplicitAny": <%= strict %>,
+    // "strictBindCallApply": <%= strict %>,
+    // "forceConsistentCasingInFileNames": <%= strict %>,
+    // "noFallthroughCasesInSwitch": <%= strict %>
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}

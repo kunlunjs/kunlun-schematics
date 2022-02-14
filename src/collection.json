@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "application": {
+      "factory": "./lib/application/application.factory#main",
+      "description": "Create a Kunlun application.",
+      "schema": "./lib/application/schema.json"
+    }
+  }
+}

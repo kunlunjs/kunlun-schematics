@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2017",
+    "typeRoots": ["node_modules/@types"],
+    "outDir": "dist",
+    "declaration": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/utils", "src/lib", "src/index.ts"],
+  "exclude": ["node_modules", "src/**/*.test.ts"]
+}

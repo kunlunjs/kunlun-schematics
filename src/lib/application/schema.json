@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsKunlunApplication",
+  "title": "Kunlun Application Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the application.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the new project?"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of the application.",
+      "default": "React"
+    },
+    "author": {
+      "type": "string",
+      "description": "Kunlun application author.",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "description": "Kunlun application description.",
+      "default": ""
+    },
+    "directory": {
+      "type": "string",
+      "description": "Kunlun application destination directory."
+    },
+    "strict": {
+      "type": "boolean",
+      "description": "With TypeScript strict mode.",
+      "default": false
+    },
+    "version": {
+      "type": "string",
+      "description": "Kunlun application version.",
+      "default": "0.0.1"
+    },
+    "language": {
+      "type": "string",
+      "description": "Kunlun application language."
+    },
+    "packageManager": {
+      "type": "string",
+      "description": "Kunlun application package manager."
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Kunlun application dependencies."
+    },
+    "devDependencies": {
+      "type": "string",
+      "description": "Kunlun application development dependencies."
+    }
+  },
+  "required": ["name"]
+}

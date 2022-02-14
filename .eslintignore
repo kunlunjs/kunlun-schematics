@@ -1,0 +1,8 @@
+# test/**
+
+dist
+
+*.min.js
+*.conf
+!.commitlintrc.js
+!.prettierrc.js
