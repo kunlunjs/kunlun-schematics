@@ -3,7 +3,7 @@
   "version": "<%= version %>",
   "description": "<%= description %>",
   "private": true,
-  "main": ".commitlintrc.js",
+  "main": "dist/src/main.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"",
