@@ -16,7 +16,11 @@
     "type": {
       "type": "string",
       "description": "The type of the application.",
-      "default": "react"
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Which project type would you want to choice?\n  👉 react\n  👉 vue\n  👉 taro\n  👉 uniapp\n  👉 nest-prisma-restful\n  👉 nest-prisma-graphql\n  👉 react+nest-prisma-restful\n  👉 react+nest-prisma-graphql\n  🕺"
     },
     "author": {
       "type": "string",

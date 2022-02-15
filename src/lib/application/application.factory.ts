@@ -39,7 +39,9 @@ function transform(options: ApplicationOptions): ApplicationOptions {
   // target.language = !!target.language ? target.language : DEFAULT_LANGUAGE
   target.name = resolvePackageName(target.name)
   target.type = (
-    !!target.type ? target.type : DEFAULT_PROJECT_TYPE
+    !!target.type
+      ? target.type.toLowerCase().replace(/\s+|\(\w+\)/g, '')
+      : DEFAULT_PROJECT_TYPE
   ).toLowerCase()
   target.version = !target.version ? target.version : DEFAULT_VERSION
 

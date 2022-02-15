@@ -17,7 +17,6 @@ describe('Application Factory', () => {
       .runSchematicAsync('application', options)
       .toPromise()
     const files: string[] = tree.files
-    console.log(files)
     expect(files).toEqual([
       '/project/.commitlintrc.js',
       '/project/.editorconfig',
