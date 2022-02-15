@@ -1,6 +1,6 @@
 {
   "name": "@kunlunjs/schematics",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Kunlun - modern, fast, powerful fullstack framework (@schematics)",
   "main": "dist/index.js",
   "files": ["dist/**/*"],
