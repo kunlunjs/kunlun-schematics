@@ -1,4 +1,6 @@
-# kunlun-schematics
+<p align="center">
+  <a href="http://kunlunjs.cn/" target="blank"><img src="logo.png" width="320" alt="Kunlun Logo" /></a>
+</p>
 
 <p align="center">A <a href="http://nodejs.org" target="blank">fullstack(NestJS、React)</a> framework for building efficient and scalable applications.</p>
     <p align="center">
