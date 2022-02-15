@@ -6,3 +6,4 @@ dist
 *.conf
 !.commitlintrc.js
 !.prettierrc.js
+.node-version.

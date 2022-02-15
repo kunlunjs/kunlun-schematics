@@ -31,7 +31,6 @@
 *.gitattributes
 *.xls
 !.stylelintrc.json
-.node-version
 
 dist
 Dockerfile

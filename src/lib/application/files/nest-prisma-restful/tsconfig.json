@@ -1,12 +1,11 @@
 {
-  "include": ["src", "scripts"],
-  // https://www.typescriptlang.org/tsconfig#compilerOptions
+  "include": ["src", "scripts", "test", "types"],
   "compilerOptions": {
     /* Type Checking */
     "strict": true,
     "strictPropertyInitialization": false,
     /* Modules */
-    "module": "ESNext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
     "baseUrl": "./",
@@ -15,7 +14,6 @@
     },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    // "types": [],
     /* Emit */
     "sourceMap": true,
     "declaration": true,
@@ -33,7 +31,6 @@
     "target": "ESNext",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "jsx": "react-jsx",
     /* Compiler Dignostics */
     /* Projects */
     "incremental": true,

@@ -18,6 +18,7 @@
     "publish:next": "npm publish --access public --tag next",
     "prepublish:npm": "npm run build",
     "publish:npm": "npm publish --access public",
+    "changelog": "npx conventional-changelog-cli conventional-changelog -p angular -i ./CHANGELOG.md -s",
     "prerelease": "npm run build",
     "release": "release-it",
     "test": "npm run clean && NODE_ENV=test jest -w 1 --no-cache --config jest.json",
