@@ -34,6 +34,7 @@ describe('Application Factory', () => {
       '/project/.husky/commit-msg',
       '/project/.husky/pre-commit',
       '/project/.husky/prepare-commit-msg',
+      '/project/scripts/verify-commit-msg.ts',
       '/project/src/index.tsx'
     ])
   })
@@ -63,6 +64,7 @@ describe('Application Factory', () => {
       '/awesome_project/.husky/commit-msg',
       '/awesome_project/.husky/pre-commit',
       '/awesome_project/.husky/prepare-commit-msg',
+      '/awesome_project/scripts/verify-commit-msg.ts',
       '/awesome_project/src/index.tsx'
     ])
   })
@@ -93,6 +95,7 @@ describe('Application Factory', () => {
       '/scope-package/.husky/commit-msg',
       '/scope-package/.husky/pre-commit',
       '/scope-package/.husky/prepare-commit-msg',
+      '/scope-package/scripts/verify-commit-msg.ts',
       '/scope-package/src/index.tsx'
     ])
   })

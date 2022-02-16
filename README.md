@@ -2,12 +2,12 @@
   <a href="http://kunlunjs.cn/" target="blank"><img src="logo.png" width="600" alt="Kunlun Logo" /></a>
 </p>
 
-<p align="center">A <a href="http://nodejs.org" target="blank">fullstack(NestJS、React)</a> framework for building efficient and scalable applications.</p>
-    <p align="center">
+<p align="center">A <a href="http://nodejs.org" target="blank">fullstack(NestJS、React)</a> framework for building efficient and scalable applications.</p><p align="center">
 <a href="https://www.npmjs.com/org/kunlunjs"><img src="https://img.shields.io/npm/v/@kunlunjs/schematics.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/org/kunlunjs"><img src="https://img.shields.io/npm/l/@kunlunjs/schematics.svg" alt="Package License" /></a>
 <a href="https://www.npmjs.com/org/kunlunjs"><img src="https://img.shields.io/npm/dm/@kunlunjs/schematics.svg" alt="NPM Downloads" /></a>
-  <a href="https://coveralls.io/github/turing-fe/kunlun-schematics?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/turing-fe/kunlun-schematics/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://coveralls.io/github/turing-fe/kunlun-schematics?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/turing-fe/kunlun-schematics/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://circleci.com/gh/turing-fe/kunlun-schematics" target="_blank"><img src="https://circleci.com/gh/turing-fe/kunlun-schematics.svg?style=svg" alt="CircleCI" /></a>
 
 ## Description
 
