@@ -1,8 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-# 依赖：@commitlint/cli 和 @commitlint/config-conventional，需要配置文件 .commitlintrc.js
-# npx --no-install commitlint --edit $1
-
-# TODO
-npx --no-install ts-node "./scripts/verify-commit-msg.ts" $1
