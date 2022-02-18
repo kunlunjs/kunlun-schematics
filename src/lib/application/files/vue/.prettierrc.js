@@ -15,7 +15,7 @@ module.exports = {
   overrides: [
     {
       files:
-        '*.{babelrc,eslintrc,huskyrc,lintstagedrc,json,prettierrc,stylelintrc,code-snippets}',
+        '*.{babelrc,eslintrc,huskyrc,lintstagedrc,json,prettierrc,stylelintrc}',
       options: {
         parser: 'json'
       }
