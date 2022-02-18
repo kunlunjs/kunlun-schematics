@@ -7,3 +7,4 @@ dist
 !.commitlintrc.js
 !.prettierrc.js
 .node-version.
+**/.vscode/*

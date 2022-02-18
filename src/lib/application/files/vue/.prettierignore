@@ -18,7 +18,6 @@
 *.png
 *.yml
 *.sh
-*.code-snippets
 
 **/*.png
 
@@ -32,7 +31,6 @@
 *.gitattributes
 *.xls
 !.stylelintrc.json
-.node-version
 
 dist
 Dockerfile

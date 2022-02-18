@@ -1,21 +1,30 @@
 version: 2
 
 aliases:
+  - &install-pnpm
+    run:
+      name: Install pnpm
+      command: sudo npm install --global pnpm
   - &restore-cache
     restore_cache:
         key: dependency-cache-{{ checksum "package.json" }}
+  - &save-cache
+    save_cache:
+      key: dependency-cache-{{ checksum "package.json" }}
+      paths:
+        - ./node_modules
   - &install-deps
     run:
         name: Install dependencies
-        command: npm ci
+        command: pnpm install
   - &build-packages
     run:
         name: Build
-        command: npm run build
+        command: pnpm run build
   - &run-unit-tests
     run:
         name: Test
-        command: npm run test
+        command: pnpm run test
 
 jobs:
   build:
@@ -24,21 +33,11 @@ jobs:
       - image: circleci/node:17
     steps:
       - checkout
-      - run:
-          name: Update NPM version
-          command: 'sudo npm install -g npm@latest'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install dependencies
-          command: npm ci
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: Build
-          command: npm run build    
+      - *install-pnpm
+      - *restore-cache
+      - *install-deps
+      - *save-cache
+      - *build-packages
 
   unit_tests:
     working_directory: ~/kunlun-schematics
@@ -46,6 +45,7 @@ jobs:
       - image: circleci/node:17
     steps:
       - checkout
+      - *install-pnpm
       - *restore-cache
       - *install-deps
       - *build-packages

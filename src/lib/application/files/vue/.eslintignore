@@ -1,0 +1,14 @@
+src/**/*.test.ts
+src/**/files/**
+# test/**
+
+dist
+
+*.min.js
+*.conf
+!.commitlintrc.js
+!.prettierrc.js
+
+lib/ui/banner.ts
+test/lib/compiler/hooks/fixtures/type-imports/src/main.ts
+test/lib/compiler/hooks/fixtures/unused-imports/src/main.ts
