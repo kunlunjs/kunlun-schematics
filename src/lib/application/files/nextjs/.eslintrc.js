@@ -20,11 +20,13 @@ module.exports = defineConfig({
     'plugin:@typescript-eslint/eslint-recommended',
     // 'plugin:node/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:tailwindcss/recommended',
+    'next/core-web-vitals',
     // Note: Please keep this as the last config to make sure that this (and by extension our .prettierrc file) overrides all configuration above it
     // https://www.npmjs.com/package/eslint-plugin-prettier#recommended-configuration
     'plugin:prettier/recommended'
   ],
-  plugins: ['import', 'unused-imports', 'prettier'],
+  plugins: ['import', 'unused-imports', 'prettier', 'react', 'react-hooks'],
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'warn',
@@ -39,6 +41,10 @@ module.exports = defineConfig({
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/comma-dangle': 'off', // Avoid conflict rule between Eslint and Prettier
+    'class-methods-use-this': 'off', // _document.tsx use render method without `this` keyword
+    'tailwindcss/no-custom-classname': 'off', // Disabled otherwise nightmare to allow each custom tailwind classes
+    'import/prefer-default-export': 'off', // Named export is easier to refactor automatically
     'import/no-webpack-loader-syntax': 'off',
     'import/order': [
       'error',
@@ -64,8 +70,12 @@ module.exports = defineConfig({
         ]
       }
     ],
-    'unused-imports/no-unused-imports': 'warn'
-    // TODO: eslint-plugin-node
+    'unused-imports/no-unused-imports': 'warn',
+    'react/destructuring-assignment': 'off', // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
+    'jsx-a11y/anchor-is-valid': 'off', // Next.js use his own internal link system
+    'react/require-default-props': 'off', // Allow non-defined react props as undefined
+    'react/jsx-props-no-spreading': 'off', // _app.tsx uses spread operator and also, react-hook-form
+    '@next/next/no-img-element': 'off' // We currently not using next/image because it isn't supported with SSG mode
   },
   settings: {
     'import/parsers': {
