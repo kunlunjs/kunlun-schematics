@@ -79,8 +79,12 @@ export class AuthService {
     })
   }
 
-  validateUser(userId: string): Promise<User | null> {
+  validateUserId(userId: string): Promise<User | null> {
     return this.prisma.user.findUnique({ where: { id: userId } })
+  }
+
+  validateUserEmail(email: string): Promise<User | null> {
+    return this.prisma.user.findUnique({ where: { email } })
   }
 
   getUserFromToken(token: string): Promise<User | null> {

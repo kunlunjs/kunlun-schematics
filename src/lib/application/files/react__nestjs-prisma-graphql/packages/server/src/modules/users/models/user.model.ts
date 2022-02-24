@@ -14,7 +14,11 @@ registerEnumType(Role, {
 
 @ObjectType()
 export class UserModel extends BaseModel {
+  name?: string
+
   email: string
+
+  mobile?: string
 
   firstname?: string
 

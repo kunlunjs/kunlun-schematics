@@ -98,6 +98,8 @@ type UserModel {
   firstname: String
   id: ID!
   lastname: String
+  mobile: String
+  name: String
   posts: [PostModel!]!
   role: Role!
 
