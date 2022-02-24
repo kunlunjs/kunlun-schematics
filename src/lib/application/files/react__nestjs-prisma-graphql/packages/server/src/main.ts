@@ -2,11 +2,11 @@ import { ValidationPipe } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { HttpAdapterHost, NestFactory } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
-// import chalk from 'chalk'
+import chalk = require('chalk')
 import { AppModule } from './app.module'
-import { PrismaService } from './common/prisma/prisma.service'
+import type { CorsConfig, NestConfig, SwaggerConfig } from './common/configs'
+import { PrismaService } from './common/prisma'
 import { PrismaClientExceptionFilter } from './filters'
-import type { CorsConfig, NestConfig, SwaggerConfig } from './interfaces'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
@@ -47,9 +47,11 @@ async function bootstrap() {
 
   await app.listen(process.env.PORT || nestConfig.port || 3000)
   console.log(
-    // chalk.green()
-    // `⚡️ Application is running on: ${chalk.underline(await app.getUrl())}`
-    `⚡️ Application is running on: ${await app.getUrl()}`
+    chalk.green(
+      `⚡️ Application is running on: ${chalk.underline(
+        (await app.getUrl()).replace('[::1]', 'localhost')
+      )}`
+    )
   )
 }
 

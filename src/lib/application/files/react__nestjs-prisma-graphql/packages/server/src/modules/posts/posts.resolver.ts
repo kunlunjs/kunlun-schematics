@@ -12,20 +12,17 @@ import {
 import type { User } from '@prisma/client'
 import { PubSub } from 'graphql-subscriptions'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PaginationArgs } from 'src/common/pagination/pagination.args'
+import { PaginationArgs } from 'src/common/pagination'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PrismaService } from 'src/common/prisma/prisma.service'
+import { PrismaService } from 'src/common/prisma'
 import { UserDecorator } from 'src/decorators'
 import { GqlAuthGuard } from 'src/guards'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PostIdArgs } from './args/post-id.args'
+import { PostIdArgs, UserIdArgs } from './args'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { UserIdArgs } from './args/user-id.args'
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { CreatePostInput } from './dto/create-post.input'
-import { PostOrder } from './dto/post-order.input'
+import { CreatePostInput, PostOrder } from './dto'
 // import { PostConnection } from './models/post-connection.model'
-import { PostModel } from './models/post.model'
+import { PostModel } from './models'
 
 const pubSub = new PubSub()
 

@@ -2,13 +2,9 @@ import { Args, Mutation, Parent, ResolveField, Resolver } from '@nestjs/graphql'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { AuthService } from './auth.service'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { LoginInput } from './dto/login.input'
+import { SignupInput, LoginInput, RefreshTokenInput } from './dto'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { RefreshTokenInput } from './dto/refresh-token.input'
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { SignupInput } from './dto/signup.input'
-import { AuthModel } from './models/auth.model'
-import { TokenModel } from './models/token.model'
+import { AuthModel, TokenModel } from './models'
 
 @Resolver(() => AuthModel)
 export class AuthResolver {

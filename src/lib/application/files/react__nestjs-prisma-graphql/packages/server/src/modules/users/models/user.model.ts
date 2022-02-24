@@ -1,6 +1,6 @@
 import { HideField, ObjectType, registerEnumType } from '@nestjs/graphql'
-import { BaseModel } from 'src/common/models/base.model'
-import type { PostModel } from 'src/modules/posts/models/post.model'
+import { BaseModel } from 'src/common/models'
+import type { PostModel } from 'src/modules/posts/models'
 
 export enum Role {
   ADMIN = 'ADMIN',

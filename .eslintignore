@@ -15,8 +15,7 @@ dist
 *.graphql
 .node-version
 Dockerfile*
-src/lib/application/files/react__nestjs-prisma-graphql/packages/server/.graphqlconfig
-src/lib/application/files/react__nestjs-prisma-graphql/packages/server/Dockerfile
-src/lib/application/files/react__nestjs-prisma-graphql/packages/server/Dockerfile.alpine
-src/lib/application/files/react__nestjs-prisma-graphql/packages/server/Dockerfile
-src/lib/application/files/react__nestjs-prisma-graphql/packages/server/**/*.graphql
+**/*/.graphqlconfig
+**/*/Dockerfile
+**/*/Dockerfile.alpine
+**/*/**/*.graphql

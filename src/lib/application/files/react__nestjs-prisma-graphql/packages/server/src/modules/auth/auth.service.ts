@@ -11,12 +11,12 @@ import { ConfigService } from '@nestjs/config'
 import { JwtService } from '@nestjs/jwt'
 import type { User } from '@prisma/client'
 import { Prisma } from '@prisma/client'
+import type { SecurityConfig } from 'src/common/configs/config.interface'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PrismaService } from 'src/common/prisma/prisma.service'
-import type { SecurityConfig } from 'src/interfaces'
+import { PrismaService } from 'src/common/prisma'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { SignupInput } from './dto/signup.input'
-import type { TokenModel } from './models/token.model'
+import { SignupInput } from './dto'
+import type { TokenModel } from './models'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { PasswordService } from './password.service'
 

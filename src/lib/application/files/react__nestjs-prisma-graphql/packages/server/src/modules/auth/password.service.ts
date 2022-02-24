@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { ConfigService } from '@nestjs/config'
 import { compare, hash } from 'bcrypt'
-import type { SecurityConfig } from 'src/interfaces'
+import type { SecurityConfig } from 'src/common/configs/config.interface'
 
 @Injectable()
 export class PasswordService {

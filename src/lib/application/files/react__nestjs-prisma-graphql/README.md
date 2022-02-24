@@ -1,5 +1,32 @@
 ## Instaling
 
+```bash
+pnpm i
+```
+
+#### 开发环境
+
+```bash
+# 启动前端服务
+# 启动后端服务
+cd packages/server && pnpm start:dev
+```
+
+#### 生产环境
+
+```bash
+# 前端构建
+cd packages/web && npm run build
+cd packages/web && npm run serve
+
+# 启动后端服务
+cd packages/server && pnpm start:prod
+# or 使用 pm2 启动后端服务守护进程
+cd packages/server && pnpm start:pm2
+```
+
+## Developing
+
 安装项目根目录依赖
 
 ```bash
@@ -31,6 +58,7 @@ pnpm i typescript -D -r --filter @kunlunjs-schematics/react-nestjs_prisma__serve
 
 - NestJS
 - Prisma
+- Swagger
 - GraphQL
 
 ## Overview

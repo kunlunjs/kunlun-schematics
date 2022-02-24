@@ -1,12 +1,10 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PrismaService } from 'src/common/prisma/prisma.service'
+import { PrismaService } from 'src/common/prisma'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { PasswordService } from '../auth/password.service'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { ChangePasswordInput } from './dto/change-password.input'
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { UpdateUserInput } from './dto/update-user.input'
+import { ChangePasswordInput, UpdateUserInput } from './dto'
 
 @Injectable()
 export class UsersService {

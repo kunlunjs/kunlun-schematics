@@ -8,12 +8,12 @@ import {
   Resolver
 } from '@nestjs/graphql'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PrismaService } from 'src/common/prisma/prisma.service'
+import { PrismaService } from 'src/common/prisma'
 import { UserDecorator } from 'src/decorators'
 import { GqlAuthGuard } from 'src/guards'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { ChangePasswordInput } from './dto/change-password.input'
-import { UserModel } from './models/user.model'
+import { ChangePasswordInput } from './dto'
+import { UserModel } from './models'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { UsersService } from './users.service'
 

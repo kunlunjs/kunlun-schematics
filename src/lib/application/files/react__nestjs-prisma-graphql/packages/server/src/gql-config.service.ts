@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import type { GqlOptionsFactory } from '@nestjs/graphql'
 import type { Request } from 'express'
-import type { GraphQLConfig } from './interfaces'
+import type { GraphQLConfig } from './common/configs/config.interface'
 
 @Injectable()
 export class GqlConfigService implements GqlOptionsFactory {
