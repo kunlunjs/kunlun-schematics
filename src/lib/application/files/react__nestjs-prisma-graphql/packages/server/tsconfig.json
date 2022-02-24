@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["prisma", "src", "test"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2017",
+    "declaration": false,
+    "removeComments": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "include": ["packages", "scripts", "*.md"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    /* Type Checking */
+    "strict": true,
+    "strictPropertyInitialization": false,
+    /* Modules */
+    // "module": "commonjs",
+    "moduleResolution": "node",
+    // "outDir": "./dist",
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@/*": [
+    //     "src/*"
+    //   ]
+    // },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    /* Emit */
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true,
+    /* JavaScript Support */
+    "allowJs": true,
+    /* Editor Support */
+    /* Interop Constraints */
+    // "esModuleInterop": true,
+    "isolatedModules": false,
+    /* Backwards Compatibility */
+    /* Languarge and Environmend */
+    "target": "ESNext",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    /* Compiler Dignostics */
+    /* Projects */
+    "incremental": true,
+    /* Output Formatting */
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}

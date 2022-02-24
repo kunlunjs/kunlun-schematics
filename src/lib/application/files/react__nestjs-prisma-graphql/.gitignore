@@ -103,5 +103,23 @@ dist
 # TernJS port file
 .tern-port
 
-pnpm-lock.yaml
+.idea/
+.envrc
+node_modules/
 .DS_Store
+*.map
+
+# output
+
+# configuration
+# renovate.json
+# gulpfile.js
+# /.vscode
+
+# sample
+# /sample
+
+yarn.lock
+pnpm-lock.yaml
+dist*
+!.env

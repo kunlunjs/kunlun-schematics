@@ -5,9 +5,9 @@ import type { NestExpressApplication } from '@nestjs/platform-express'
 import chalk from 'chalk'
 import { useContainer } from 'class-validator'
 import { AppModule } from './app.module'
+import { PrismaService } from './common/prisma'
 import { PrismaClientExceptionFilter } from './filters'
 import type { EnvironmentConfiguration } from './interfaces'
-import { PrismaService } from './shared/prisma'
 import { setupSwagger } from './swagger/setup'
 
 async function bootstrap() {

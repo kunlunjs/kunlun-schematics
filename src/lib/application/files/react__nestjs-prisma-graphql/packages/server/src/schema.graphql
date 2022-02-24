@@ -1,0 +1,106 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AuthModel {
+  """JWT access token"""
+  accessToken: JWT!
+
+  """JWT refresh token"""
+  refreshToken: JWT!
+  user: UserModel!
+}
+
+input ChangePasswordInput {
+  newPassword: String!
+  oldPassword: String!
+}
+
+input CreatePostInput {
+  content: String!
+  title: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+"""
+A field whose value is a JSON Web Token (JWT): https://jwt.io/introduction.
+"""
+scalar JWT
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type Mutation {
+  changePassword(data: ChangePasswordInput!): UserModel!
+  create(data: CreatePostInput!): PostModel!
+  login(data: LoginInput!): AuthModel!
+  refreshToken(token: JWT!): TokenModel!
+  signup(data: SignupInput!): AuthModel!
+}
+
+type PostModel {
+  author: UserModel!
+  content: String!
+
+  """创建时间"""
+  createdAt: DateTime!
+  id: ID!
+  published: Boolean!
+  title: String!
+
+  """更新时间"""
+  updatedAt: DateTime!
+}
+
+type Query {
+  hello(name: String!): String!
+  helloWorld: String!
+  me: UserModel!
+  post(postId: String!): PostModel!
+  userPosts(userId: String!): [PostModel!]!
+}
+
+"""User role"""
+enum Role {
+  ADMIN
+  USER
+}
+
+input SignupInput {
+  email: String!
+  firstname: String
+  lastname: String
+  password: String!
+}
+
+type Subscription {
+  created: PostModel!
+}
+
+type TokenModel {
+  """JWT access token"""
+  accessToken: JWT!
+
+  """JWT refresh token"""
+  refreshToken: JWT!
+}
+
+type UserModel {
+  """创建时间"""
+  createdAt: DateTime!
+  email: String!
+  firstname: String
+  id: ID!
+  lastname: String
+  posts: [PostModel!]!
+  role: Role!
+
+  """更新时间"""
+  updatedAt: DateTime!
+}

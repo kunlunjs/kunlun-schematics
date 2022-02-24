@@ -1,0 +1,18 @@
+# test/**
+
+dist
+*.sh
+*.yml
+*.yaml
+.env*
+*.min.js
+*.conf
+!.commitlintrc.js
+!.prettierrc.js
+.node-version.
+.code-snippets
+*.prisma
+*.graphql
+.node-version
+Dockerfile*
+src/lib/application/files/react__nestjs-prisma-graphql/packages/server/.graphqlconfig

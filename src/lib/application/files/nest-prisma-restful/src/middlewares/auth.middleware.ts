@@ -7,7 +7,7 @@ import type { NextFunction, Request, Response } from 'express'
 import jwt from 'jsonwebtoken'
 import { isUndefined } from 'lodash'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PrismaService } from '@/shared/prisma'
+import { PrismaService } from '@/common/prisma'
 
 @Injectable()
 export class AuthMiddleware implements NestMiddleware {

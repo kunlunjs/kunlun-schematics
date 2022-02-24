@@ -24,8 +24,8 @@
         "uniapp",
         "nest-prisma-restful",
         "nest-prisma-graphql",
-        "react+nest-prisma-restful",
-        "react+nest-prisma-graphql"
+        "react__nestjs-prisma-restful",
+        "react__nestjs-prisma-graphql"
       ],
       "x-prompt": "Which project type would you want to choice?"
     },
