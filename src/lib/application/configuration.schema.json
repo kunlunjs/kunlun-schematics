@@ -1,0 +1,72 @@
+{
+  "$id": "application-schema",
+  "$schema": "http://json-schema.org/schema",
+  "title": "Application Schema",
+  "type": "object",
+  "definitions": {
+    "configurations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "a2s",
+          "babel",
+          "browserslist",
+          "commitlint",
+          "docker",
+          "editorconfig",
+          "eslint",
+          "git",
+          "lintstaged",
+          "npm",
+          "nvm",
+          "prettier",
+          "stylelint",
+          "jest",
+          "readme",
+          "tsconfig"
+        ]
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "combinations": {
+          "type": "array",
+          "description": "将某几个项目合并成一个monorepo项目",
+          "items": {
+            "type": "string"
+          }
+        },
+        "configurationOmit": {
+          "$ref": "#/definitions/configurations",
+          "description": "需要忽略的配置文件列表"
+        },
+        "extraArguments": {
+          "$ref": "http://json-schema.org/schema",
+          "description": "项目生成时额外需要的参数"
+        }
+      }
+    },
+    {
+      "properties": {
+        "combinations": {
+          "type": "array",
+          "description": "将某几个项目合并成一个monorepo项目",
+          "items": {
+            "type": "string"
+          }
+        },
+        "configurationFiles": {
+          "$ref": "#/definitions/configurations",
+          "description": "需要生成的配置文件列表"
+        },
+        "extraArguments": {
+          "$ref": "http://json-schema.org/schema",
+          "description": "项目生成时额外需要的参数"
+        }
+      }
+    }
+  ]
+}
