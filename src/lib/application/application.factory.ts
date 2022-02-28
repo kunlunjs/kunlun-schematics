@@ -15,6 +15,7 @@ import {
   DEFAULT_PROJECT_TYPE,
   DEFAULT_VERSION
 } from '../defaults'
+import { updateTreeWithConfigurations } from './application.descriptions'
 import type { ApplicationOptions } from './application.schema'
 
 export function main(options?: ApplicationOptions): Rule {
@@ -70,6 +71,8 @@ function generate(options: ApplicationOptions, path: string): Source {
       ...strings,
       ...options
     }),
-    move(path)
+    move(path),
+    // descriptions
+    (tree, ctx) => updateTreeWithConfigurations(options.name, tree, ctx)
   ])
 }

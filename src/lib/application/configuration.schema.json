@@ -10,21 +10,15 @@
         "type": "string",
         "enum": [
           "a2s",
-          "babel",
           "browserslist",
           "commitlint",
           "docker",
           "editorconfig",
-          "eslint",
           "git",
+          "husky",
           "lintstaged",
-          "npm",
-          "nvm",
           "prettier",
-          "stylelint",
-          "jest",
-          "readme",
-          "tsconfig"
+          "stylelint"
         ]
       }
     }
@@ -39,13 +33,9 @@
             "type": "string"
           }
         },
-        "configurationOmit": {
+        "configurationsOmit": {
           "$ref": "#/definitions/configurations",
           "description": "需要忽略的配置文件列表"
-        },
-        "extraArguments": {
-          "$ref": "http://json-schema.org/schema",
-          "description": "项目生成时额外需要的参数"
         }
       }
     },
@@ -58,13 +48,9 @@
             "type": "string"
           }
         },
-        "configurationFiles": {
+        "configurations": {
           "$ref": "#/definitions/configurations",
           "description": "需要生成的配置文件列表"
-        },
-        "extraArguments": {
-          "$ref": "http://json-schema.org/schema",
-          "description": "项目生成时额外需要的参数"
         }
       }
     }
