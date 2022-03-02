@@ -10,7 +10,6 @@ import { PrismaModule } from './common/prisma'
 import { GqlConfigService } from './gql-config.service'
 import { loggingMiddleware } from './middlewares'
 import { AuthModule } from './modules/auth/auth.module'
-import { PostsModule } from './modules/posts/posts.module'
 import { UsersModule } from './modules/users/users.module'
 
 @Module({
@@ -30,8 +29,7 @@ import { UsersModule } from './modules/users/users.module'
       useClass: GqlConfigService
     }),
     AuthModule,
-    UsersModule,
-    PostsModule
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService, AppResolver],

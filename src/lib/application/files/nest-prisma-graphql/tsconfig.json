@@ -1,12 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": ["prisma", "src", "test"],
-  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "skipLibCheck": true,
     "module": "commonjs",
-    "target": "ES2017",
-    "declaration": false,
+    "target": "es2017",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "removeComments": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {

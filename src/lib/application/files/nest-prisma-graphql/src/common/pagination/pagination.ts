@@ -2,30 +2,30 @@ import type { Type } from '@nestjs/common'
 import { Field, ObjectType, Int } from '@nestjs/graphql'
 import { PageInfo } from './page-info.model'
 
-export default function Paginated<TItem>(TItemClass: Type<TItem>) {
-  @ObjectType(`${TItemClass.name}Edge`)
+export function Paginated<T>(classRef: Type<T>): any {
+  @ObjectType(`${classRef.name}Edge`, { isAbstract: true })
   abstract class EdgeType {
     @Field(() => String)
     cursor: string
 
-    @Field(() => TItemClass)
-    node: TItem
+    @Field(() => classRef)
+    node: T
   }
 
-  // `isAbstract` decorator option is mandatory to prevent registering in schema
   @ObjectType({ isAbstract: true })
   abstract class PaginatedType {
-    @Field(() => [EdgeType], { nullable: true })
-    edges: Array<EdgeType>
-
-    // @Field((type) => [TItemClass], { nullable: true })
-    // nodes: Array<TItem>;
-
-    @Field(() => PageInfo)
-    pageInfo: PageInfo
-
     @Field(() => Int)
     totalCount: number
+
+    @Field(() => PageInfo, { nullable: true })
+    pageInfo?: PageInfo
+
+    @Field(() => [EdgeType], { nullable: true })
+    edges?: EdgeType[]
+
+    @Field(() => [classRef], { nullable: true })
+    nodes?: T[]
   }
+
   return PaginatedType
 }
