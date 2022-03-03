@@ -1,0 +1,4 @@
+{
+  "$schema": "../../configuration.schema.json",
+  "configurationsOmit": ["docker"]
+}

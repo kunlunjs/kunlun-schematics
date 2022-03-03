@@ -1,0 +1,58 @@
+{
+  "$id": "application-schema",
+  "$schema": "http://json-schema.org/schema",
+  "title": "Application Schema",
+  "type": "object",
+  "definitions": {
+    "configurations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "a2s",
+          "browserslist",
+          "commitlint",
+          "docker",
+          "editorconfig",
+          "git",
+          "husky",
+          "lintstaged",
+          "prettier",
+          "stylelint"
+        ]
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "combinations": {
+          "type": "array",
+          "description": "将某几个项目合并成一个monorepo项目",
+          "items": {
+            "type": "string"
+          }
+        },
+        "configurationsOmit": {
+          "$ref": "#/definitions/configurations",
+          "description": "需要忽略的配置文件列表"
+        }
+      }
+    },
+    {
+      "properties": {
+        "combinations": {
+          "type": "array",
+          "description": "将某几个项目合并成一个monorepo项目",
+          "items": {
+            "type": "string"
+          }
+        },
+        "configurations": {
+          "$ref": "#/definitions/configurations",
+          "description": "需要生成的配置文件列表"
+        }
+      }
+    }
+  ]
+}
