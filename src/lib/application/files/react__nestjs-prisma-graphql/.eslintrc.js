@@ -3,94 +3,85 @@ const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
   root: true,
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: 'module'
-  },
   env: {
-    es6: true,
-    jest: true,
     node: true,
-    mocha: true,
-    browser: true
+    es6: true
   },
-  extends: [
-    // 'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    // 'plugin:node/recommended',
-    'plugin:@typescript-eslint/recommended',
-    // Note: Please keep this as the last config to make sure that this (and by extension our .prettierrc file) overrides all configuration above it
-    // https://www.npmjs.com/package/eslint-plugin-prettier#recommended-configuration
-    'plugin:prettier/recommended'
-  ],
-  plugins: ['import', 'unused-imports' /*, 'react', 'react-hooks' */],
-  rules: {
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/consistent-indexed-object-style': 'warn',
-    '@typescript-eslint/consistent-type-assertions': 'off',
-    '@typescript-eslint/consistent-type-definitions': 'off',
-    '@typescript-eslint/consistent-type-imports': 1,
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    'import/no-webpack-loader-syntax': 'off',
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object'
-          // 'type'
-        ],
-        alphabetize: {
-          order: 'asc'
-        },
-        pathGroups: [
-          {
-            pattern: '@/**',
-            group: 'internal'
-          }
-        ]
-      }
-    ],
-    'unused-imports/no-unused-imports': 'warn'
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
-    },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts']
-      },
-      typescript: {
-        alwaysTryTypes: true
-      }
-    }
-  },
+  parserOptions: { ecmaVersion: 8, sourceType: 'module' },
+  ignorePatterns: ['node_modules/*'],
+  extends: ['eslint:recommended'],
   overrides: [
     {
-      files: ['*.js'],
+      files: ['**/*.ts', '**/*.tsx'],
+      parser: '@typescript-eslint/parser',
+      settings: {
+        // 'react': { version: 'detect' },
+        'import/resolver': {
+          typescript: {}
+        }
+      },
+      env: {
+        browser: true,
+        node: true,
+        es6: true
+      },
+      extends: [
+        'eslint:recommended',
+        'plugin:import/errors',
+        'plugin:import/warnings',
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:jsx-a11y/recommended',
+        'plugin:prettier/recommended',
+        'plugin:testing-library/react',
+        'plugin:jest-dom/recommended'
+      ],
       rules: {
-        'import/no-commonjs': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off'
-      }
-    },
-    {
-      files: ['*.d.ts'],
-      rules: {
-        '@typescript-eslint/triple-slash-reference': 'off'
+        'no-restricted-imports': [
+          'error',
+          {
+            patterns: ['@/features/*/*']
+          }
+        ],
+        'linebreak-style': ['error', 'unix'],
+        'react/prop-types': 'off',
+
+        // 'import/order': [
+        //   'error',
+        //   {
+        //     'groups': [
+        //       'builtin',
+        //       'external',
+        //       'internal',
+        //       'parent',
+        //       'sibling',
+        //       'index',
+        //       'object'
+        //     ],
+        //     'newlines-between': 'always',
+        //     'alphabetize': { order: 'asc', caseInsensitive: true }
+        //   }
+        // ],
+        'import/default': 'off',
+        'import/no-named-as-default-member': 'off',
+        'import/no-named-as-default': 'off',
+        'import/no-unresolved': 'off',
+        'import/order': 'off',
+
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-key': 'off',
+        'jsx-a11y/anchor-is-valid': 'off',
+
+        // '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/explicit-function-return-type': ['off'],
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+        '@typescript-eslint/no-empty-function': ['off'],
+        '@typescript-eslint/no-explicit-any': ['off'],
+        '@typescript-eslint/ban-ts-comment': 'off',
+        'prettier/prettier': ['error', {}, { usePrettierrc: true }]
       }
     }
   ]

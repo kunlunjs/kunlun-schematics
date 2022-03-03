@@ -1,11 +1,12 @@
 import type { DynamicModule, Provider } from '@nestjs/common'
 import { Module } from '@nestjs/common'
-import { PRISMA_SERVICE_OPTIONS } from 'src/constants'
-import type {
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import {
   PrismaModuleAsyncOptions,
   PrismaModuleOptions,
   PrismaOptionsFactory
-} from 'src/interfaces'
+} from './interfaces'
+import { PRISMA_SERVICE_OPTIONS } from './prisma.constants'
 import { PrismaService } from './prisma.service'
 
 @Module({

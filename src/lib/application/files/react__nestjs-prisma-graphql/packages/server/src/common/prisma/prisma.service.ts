@@ -3,12 +3,11 @@ import type {
   OnModuleDestroy,
   OnModuleInit
 } from '@nestjs/common'
-import { Inject, Optional } from '@nestjs/common'
-import { Injectable } from '@nestjs/common'
+import { Inject, Optional, Injectable } from '@nestjs/common'
 import { PrismaClient } from '@prisma/client'
-import { PRISMA_SERVICE_OPTIONS } from 'src/constants'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { PrismaServiceOptions } from 'src/interfaces'
+import { PrismaServiceOptions } from './interfaces'
+import { PRISMA_SERVICE_OPTIONS } from './prisma.constants'
 
 @Injectable()
 export class PrismaService

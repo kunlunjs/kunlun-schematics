@@ -105,3 +105,5 @@ dist
 
 pnpm-lock.yaml
 .DS_Store
+
+src/lib/application/files/react__nestjs-prisma-graphql/packages/web

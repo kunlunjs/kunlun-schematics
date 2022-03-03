@@ -5,8 +5,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 import chalk = require('chalk')
 import { AppModule } from './app.module'
 import type { CorsConfig, NestConfig, SwaggerConfig } from './common/configs'
-import { PrismaService } from './common/prisma'
-import { PrismaClientExceptionFilter } from './filters'
+import { PrismaService, PrismaClientExceptionFilter } from './common/prisma'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)

@@ -1,6 +1,5 @@
 import type { ArgumentsHost } from '@nestjs/common'
-import { HttpStatus } from '@nestjs/common'
-import { Catch } from '@nestjs/common'
+import { HttpStatus, Catch } from '@nestjs/common'
 import { BaseExceptionFilter } from '@nestjs/core'
 import { Prisma } from '@prisma/client'
 import type { Response } from 'express'
@@ -29,9 +28,10 @@ export class PrismaClientExceptionFilter extends BaseExceptionFilter {
         break
       case 'P2025':
         this.catchNotFound(exception, response)
-      default:
-        this.unhandleException(exception, host)
-        break
+      // TODO
+      // default:
+      //   this.unhandleException(exception, host)
+      //   break
     }
   }
 
