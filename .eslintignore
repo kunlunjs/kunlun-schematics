@@ -19,3 +19,4 @@ Dockerfile*
 **/*/Dockerfile
 **/*/Dockerfile.alpine
 **/*/**/*.graphql
+src/lib/**/*

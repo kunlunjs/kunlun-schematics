@@ -5,6 +5,12 @@
       "factory": "./lib/application/application.factory#main",
       "description": "Create a Kunlun application.",
       "schema": "./lib/application/schema.json"
+    },
+    "resource": {
+      "factory": "./lib/resource/resource.factory#main",
+      "description": "Create a Kunlun resource.",
+      "schema": "./lib/resource/schema.json",
+      "aliases": ["res"]
     }
   }
 }
