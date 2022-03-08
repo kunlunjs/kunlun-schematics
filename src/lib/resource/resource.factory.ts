@@ -69,14 +69,12 @@ function generate(options: ResourceOptions): Source {
         if (path.endsWith('.dto.ts')) {
           return (
             options.type !== 'graphql-code-first' &&
-            options.type !== 'graphql-schema-first' &&
             options.crud
           )
         }
         if (path.endsWith('.input.ts')) {
           return (
-            (options.type === 'graphql-code-first' ||
-              options.type === 'graphql-schema-first') &&
+            options.type === 'graphql-code-first' &&
             options.crud
           )
         }
@@ -85,21 +83,14 @@ function generate(options: ResourceOptions): Source {
           path.endsWith('.resolver.spec.ts')
         ) {
           return (
-            options.type === 'graphql-code-first' ||
-            options.type === 'graphql-schema-first'
+            options.type === 'graphql-code-first'
           )
-        }
-        if (path.endsWith('.graphql')) {
-          return options.type === 'graphql-schema-first' && options.crud
         }
         if (
           path.endsWith('controller.ts') ||
           path.endsWith('.controller.spec.ts')
         ) {
-          return options.type === 'microservice' || options.type === 'rest'
-        }
-        if (path.endsWith('.gateway.ts') || path.endsWith('.gateway.spec.ts')) {
-          return options.type === 'ws'
+          return options.type === 'rest'
         }
         if (path.includes('@ent')) {
           // Entity class file workaround

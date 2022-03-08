@@ -35,9 +35,6 @@ export interface ResourceOptions {
   type?:
     | 'rest'
     | 'graphql-code-first'
-    | 'graphql-schema-first'
-    | 'microservice'
-    | 'ws'
   /**
    * When true, CRUD entry points are generated.
    */

@@ -38,10 +38,7 @@
       "default": "rest",
       "enum": [
         "rest",
-        "graphql-code-first",
-        "graphql-schema-first",
-        "microservice",
-        "ws"
+        "graphql-code-first"
       ],
       "x-prompt": {
         "message": "What transport layer do you use?",
@@ -51,18 +48,6 @@
           {
             "value": "graphql-code-first",
             "label": "GraphQL (code first)"
-          },
-          {
-            "value": "graphql-schema-first",
-            "label": "GraphQL (schema first)"
-          },
-          {
-            "value": "microservice",
-            "label": "Microservice (non-HTTP)"
-          },
-          {
-            "value": "ws",
-            "label": "WebSockets"
           }
         ]
       }
