@@ -69,22 +69,7 @@
     "fields": {
       "type": "array",
       "description": "Entity fields.",
-      "default": [{
-        "title": "ID",
-        "name": "id",
-        "type": "String",
-        "isPrimaryKey": true,
-        "primaryKeyStrategy": "uuid"
-      },{
-        "name": "category",
-        "title": "分类",
-        "isPrimaryKey": false,
-        "type": "String",
-        "isArray": false,
-        "unique": false,
-        "nullable": true,
-        "defaultValue": "其他"
-      }]
+      "default": []
     },
     "importTypes": {
       "type": "array",

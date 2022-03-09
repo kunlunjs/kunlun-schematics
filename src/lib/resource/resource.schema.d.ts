@@ -69,6 +69,7 @@ export interface Field_T {
   length?: number
 
   tsType?: string
+  gqlType?: string
 }
 
 export interface ResourceOptions {

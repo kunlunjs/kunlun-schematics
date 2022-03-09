@@ -28,13 +28,24 @@ import {
 } from '../../utils/dependencies.utils'
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks'
 
-const TYPE_MAPPING = {
+const TS_TYPE_MAPPING = {
   'String': 'string',
   'Boolean': 'boolean',
   'Int': 'number' ,
   'BigInt': 'number' ,
   'Float': 'number' ,
   'Decimal': 'number' ,
+  'DateTime': 'Date',
+  'Json': 'JSON'
+}
+
+const GQL_TYPE_MAPPING = {
+  'String': 'String',
+  'Boolean': 'Boolean',
+  'Int': 'Int' ,
+  'BigInt': 'Int' ,
+  'Float': 'Float' ,
+  'Decimal': 'Float' ,
   'DateTime': 'Date',
   'Json': 'JSON'
 }
@@ -67,16 +78,18 @@ function transform(options: ResourceOptions): ResourceOptions {
 
   target.path = target.flat
     ? target.path
-    : join(target.path as Path, target.name)
+    : join(target.path as Path, 'modules', target.name)
   target.isSwaggerInstalled = options.isSwaggerInstalled ?? false
 
-
   target.fields.map( x => {
-    x.tsType = TYPE_MAPPING[x.type]
+    x.tsType = TS_TYPE_MAPPING[x.type]
+    x.gqlType = GQL_TYPE_MAPPING[x.type]
     return x
   })
 
-  const importTypes = [...new Set(options.fields.map(f => f.type))]
+  const importTypes = [...new Set(target.fields.map(f => f.gqlType))].filter(
+    val => ['Float', 'Int'].includes(val)
+  )
   if (importTypes.length !== 0) {
     target.importTypes = `, ${importTypes.join(', ')}`
   }

@@ -3,7 +3,7 @@
 @InputType()
 export class Create<%= singular(classify(name)) %>Input {
   <% fields.forEach(col => { if (col.name !== 'id') { %>
-  @Field(() => <%= col.type %>, { description: '<%= col.title %>' })
+  @Field(() => <%= col.gqlType %>, { description: '<%= col.title %>' })
   <%= col.name %>: <%= col.tsType %>
   <% }}); %>
 }<% } else { %>export class Create<%= singular(classify(name)) %>Input {}<% } %>
