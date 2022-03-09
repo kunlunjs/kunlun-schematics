@@ -28,6 +28,17 @@ import {
 } from '../../utils/dependencies.utils'
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks'
 
+const TYPE_MAPPING = {
+  'String': 'string',
+  'Boolean': 'boolean',
+  'Int': 'number' ,
+  'BigInt': 'number' ,
+  'Float': 'number' ,
+  'Decimal': 'number' ,
+  'DateTime': 'Date',
+  'Json': 'JSON'
+}
+
 export function main(options: ResourceOptions): Rule {
   options = transform(options)
 
@@ -58,6 +69,17 @@ function transform(options: ResourceOptions): ResourceOptions {
     ? target.path
     : join(target.path as Path, target.name)
   target.isSwaggerInstalled = options.isSwaggerInstalled ?? false
+
+
+  target.fields.map( x => {
+    x.tsType = TYPE_MAPPING[x.type]
+    return x
+  })
+
+  const importTypes = [...new Set(options.fields.map(f => f.type))]
+  if (importTypes.length !== 0) {
+    target.importTypes = `, ${importTypes.join(', ')}`
+  }
 
   return target
 }

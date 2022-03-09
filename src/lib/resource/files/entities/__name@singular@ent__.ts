@@ -1,7 +1,9 @@
-<% if (type === 'graphql-code-first') { %>import { ObjectType, Field, Int } from '@nestjs/graphql';
+<% if (type === 'graphql-code-first') { %>import { ObjectType, Field<%= importTypes %> } from '@nestjs/graphql'
 
 @ObjectType()
 export class <%= singular(classify(name)) %> {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  <% fields.forEach(col => { %>
+  @Field(() => <%= col.type %>, { description: '<%= col.title %>' })
+  <%= col.name %>: <%= col.tsType %>
+  <% }); %>
 }<% } else { %>export class <%= singular(classify(name)) %> {}<% } %>
