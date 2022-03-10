@@ -35,7 +35,7 @@
     "type": {
       "type": "string",
       "description": "The transport layer.",
-      "default": "graphql-code-first",
+      "default": "rest",
       "enum": [
         "rest",
         "graphql-code-first"

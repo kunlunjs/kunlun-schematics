@@ -2,8 +2,8 @@
 
 @ObjectType()
 export class <%= singular(classify(name)) %> {
-  <% fields.forEach(col => { %>
+<% fields.forEach(col => { %>
   @Field(() => <%= col.gqlType %>, { description: '<%= col.title %>' })
   <%= col.name %>: <%= col.tsType %>
-  <% }); %>
+<% }); %>
 }<% } else { %>export class <%= singular(classify(name)) %> {}<% } %>
