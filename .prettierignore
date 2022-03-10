@@ -46,3 +46,4 @@ yarn.lock
 **/*/Dockerfile
 **/*/Dockerfile.alpine
 **/*/**/*.graphql
+src/lib/**/*
