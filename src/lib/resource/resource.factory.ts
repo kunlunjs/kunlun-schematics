@@ -81,6 +81,7 @@ function transform(options: ResourceOptions): ResourceOptions {
     : join(target.path as Path, 'modules', target.name)
   target.isSwaggerInstalled = options.isSwaggerInstalled ?? false
 
+  target.fields = parseFields(target.fields_str)
   target.fields.map( x => {
     x.tsType = TS_TYPE_MAPPING[x.type]
     x.gqlType = GQL_TYPE_MAPPING[x.type]
@@ -95,6 +96,10 @@ function transform(options: ResourceOptions): ResourceOptions {
   }
 
   return target
+}
+
+function parseFields(str: string) {
+  return JSON.parse(str)
 }
 
 function generate(options: ResourceOptions): Source {

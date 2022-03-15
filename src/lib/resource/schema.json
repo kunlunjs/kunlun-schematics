@@ -71,6 +71,11 @@
       "description": "Entity fields.",
       "default": []
     },
+    "fields_str": {
+      "type": "string",
+      "description": "Fields string.",
+      "default": "[]"
+    },
     "importTypes": {
       "type": "array",
       "description": "Types of fields.",

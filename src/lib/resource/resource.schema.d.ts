@@ -121,5 +121,6 @@ export interface ResourceOptions {
    * Entity fields
    */
   fields?: Field_T[]
+  fields_str?: string
   importTypes?: string
 }
