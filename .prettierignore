@@ -37,6 +37,7 @@
 dist
 Dockerfile
 LICENSE
+license.txt
 node_modules
 docker-compose.yml
 pnpm-lock.yaml
@@ -46,3 +47,5 @@ yarn.lock
 **/*/Dockerfile
 **/*/Dockerfile.alpine
 **/*/**/*.graphql
+
+src/lib/application/files/react-admin/public/**/*.*

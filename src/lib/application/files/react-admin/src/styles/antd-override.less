@@ -1,0 +1,54 @@
+.ant-table-title {
+  background: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+
+.ant-table-thead {
+  background: #f9fafc;
+}
+
+.ant-layout-footer {
+  padding: 16px 50px;
+}
+
+/* 导航栏菜单项高度 */
+.ant-menu-item {
+  height: 32px !important;
+}
+
+.modal-form-small {
+  .ant-form-item {
+    margin-bottom: 12px;
+  }
+}
+
+// 详情页表头和内容不换行，富文本除外
+.ant-descriptions-small {
+  th.ant-descriptions-item-label,
+  td.ant-descriptions-item-content:not(.richtext) {
+    white-space: nowrap;
+  }
+}
+
+.notablebody {
+  .ant-table-tbody {
+    display: none;
+  }
+}
+
+.kl-tableform {
+  .ant-checkbox-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.ant-table-tbody
+  > tr.ant-table-row-selected
+  > td:not(.ant-table-cell-fix-right) {
+  background: rgb(53 123 112 / 10%);
+}
+
+.ant-table-tbody > tr.ant-table-row-selected > td.ant-table-cell-fix-right {
+  background: white;
+}

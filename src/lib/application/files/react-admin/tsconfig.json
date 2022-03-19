@@ -1,0 +1,12 @@
+{
+  "include": ["mock", "src", "config", "types"],
+  // https://www.typescriptlang.org/tsconfig#compilerOptions
+  "compilerOptions": {
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react-jsxdev",
+    "paths": { "@/*": ["src/*"] }
+  }
+}

@@ -1,0 +1,75 @@
+.login-total-content {
+  overflow: hidden;
+
+  .login-left {
+    width: 70%;
+    overflow: hidden;
+
+    .login-left-header-top {
+      .login-left-header-title {
+        display: inline-block;
+        width: 340px;
+        height: 20px;
+        color: #20242b;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      .login-left-addicon {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          left: 75%;
+          width: 0;
+          height: 8px;
+          content: '>';
+        }
+      }
+    }
+
+    .ant-form {
+      width: 430px;
+      height: 450px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 28px 0 rgb(74 96 171 / 15%);
+
+      .form-title {
+        width: 134px;
+        height: 24px;
+        margin-bottom: 72px;
+        color: #040410;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      .ant-btn-primary[disabled],
+      .ant-btn-primary[disabled]:hover,
+      .ant-btn-primary[disabled]:focus,
+      .ant-btn-primary[disabled]:active {
+        color: #fff;
+        opacity: 0.29;
+      }
+
+      .ant-btn {
+        height: 40px;
+        margin-top: 48px;
+        border-radius: 4px;
+      }
+
+      .ant-btn-primary {
+        background: linear-gradient(180deg, #3860ff 0%, #398dff 100%);
+        border: none !important;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .login-right {
+    width: 40%;
+    height: 100vh;
+  }
+}

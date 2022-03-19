@@ -19,3 +19,7 @@ Dockerfile*
 **/*/Dockerfile
 **/*/Dockerfile.alpine
 **/*/**/*.graphql
+LICENSE
+license.txt
+
+src/lib/application/files/react-admin/public/**/*.*
