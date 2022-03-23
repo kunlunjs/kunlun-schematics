@@ -1,6 +1,17 @@
-<% if (isSwaggerInstalled) { %>import { PartialType } from '@nestjs/swagger';<% } else { %>import { PartialType } from '@nestjs/mapped-types';<% } %>
-import { Create<%= singular(classify(name)) %>Dto } from './create-<%= singular(name) %>.dto';
+import { ApiPropertyOptional } from '@nestjs/swagger'
+import { E<%= classify(name) %>Type, EApprovalStatus } from '@prisma/client'
+import { Type } from 'class-transformer'
+import {
+  IsOptional,
+  IsNotEmpty,
+  IsArray
+} from 'class-validator'
 
-export class Update<%= singular(classify(name)) %>Dto extends PartialType(Create<%= singular(classify(name)) %>Dto) {<% if ((type === 'microservice' || type === 'ws') && crud) { %>
-  id: number;
-<% }%>}
+export class Create<%= singular(classify(name)) %>Dto {
+  <% fields.forEach(col => { %>
+    @ApiPropertyOptional({ description: '<% col.name %>' })
+    <% if (col.nullable) { %>@IsNotEmpty()<% } else { %>@IsOptional()<% } %>
+    <% if (col.isArray) { %>@IsArray()<% } %>
+    <%= col.name %>: <%= col.tsType %>
+  <% }); %>
+  }
