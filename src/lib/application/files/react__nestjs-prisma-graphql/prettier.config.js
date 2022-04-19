@@ -1,91 +1,12 @@
+const prettierConfig = require('@kunlunjs/fabric/dist/prettier')
+
+// @ts-check
 /**
- * @returns {import('prettier')}
- * @see https://prettier.io/docs/en/options.html
+ * 安装 @types/prettier，可选
+ * @type {import('prettier').Config}
  */
 module.exports = {
-  parser: 'babel',
-  semi: false,
-  singleQuote: true,
-  quoteProps: 'consistent',
-  trailingComma: 'none',
-  arrowParens: 'avoid',
-  rangeStart: 0,
-  rangeEnd: Infinity,
-  endOfLine: 'auto',
-  overrides: [
-    {
-      files:
-        '*.{babelrc,eslintrc,huskyrc,lintstagedrc,json,prettierrc,stylelintrc}',
-      options: {
-        parser: 'json'
-      }
-    },
-    {
-      files: '*.{ts,tsx}',
-      options: {
-        parser: 'typescript'
-      }
-    },
-    {
-      files: '*.{ejs,hbs,html}',
-      options: {
-        parser: 'html'
-      }
-    },
-    {
-      files: '*.vue',
-      options: {
-        parser: 'vue'
-      }
-    },
-    {
-      files: '*.md',
-      options: {
-        parser: 'markdown'
-      }
-    },
-    {
-      files: '*.mdx',
-      options: {
-        parser: 'mdx'
-      }
-    },
-    {
-      files: '*.css',
-      options: {
-        parser: 'css'
-      }
-    },
-    {
-      files: '*.less',
-      options: {
-        parser: 'less'
-      }
-    },
-    {
-      files: '*.scss',
-      options: {
-        parser: 'scss'
-      }
-    },
-    {
-      files: '*.yaml',
-      options: {
-        parser: 'yaml'
-      }
-    },
-    {
-      files: ['*.yml'],
-      options: {
-        singleQuote: false
-      }
-    },
-    {
-      files: ['*.json5'],
-      options: {
-        singleQuote: false,
-        quoteProps: 'preserve'
-      }
-    }
-  ]
+  ...prettierConfig,
+  // 如果使用了 tailwindcss，默认查找 prettier 配置文件同目录的 tailwindcss.config.js 文件，在其它位置则需指定，如
+  tailwindConfig: './packages/web/tailwind.config.js'
 }
