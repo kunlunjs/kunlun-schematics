@@ -1,6 +1,13 @@
 {
-  "include": ["packages", "scripts", "*.md"],
-  // "exclude": ["node_modules", "dist"],
+  "include": ["packages"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "packages/server/ecosystem.config.js",
+    "packages/server/jest.config.js",
+    "packages/web/public",
+    "packages/web/tailwind.config.js"
+  ],
   "compilerOptions": {
     /* Type Checking */
     "strict": true,

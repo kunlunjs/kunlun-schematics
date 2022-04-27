@@ -1,5 +1,5 @@
 {
-  "include": ["src", "scripts", "test", "types"],
+  "include": ["src", "test", "types"],
   "compilerOptions": {
     /* Type Checking */
     "strict": true,
