@@ -1,5 +1,5 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# . "$(dirname "$0")/_/husky.sh"
 
 # https://github.com/folke/devmoji/blob/master/README.md
 npx --no-install devmoji -e

@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "hex-ci.stylelint-plus",
+    "wayou.vscode-todo-highlight",
+    "Gruntfuggly.todo-tree"
+  ]
+}

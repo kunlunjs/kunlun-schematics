@@ -3,9 +3,7 @@
   "version": "0.0.10",
   "description": "Kunlun - modern, fast, powerful fullstack framework (@schematics)",
   "main": "dist/index.js",
-  "files": [
-    "dist/**/*"
-  ],
+  "files": ["dist/**/*"],
   "publishConfig": {
     "access": "public"
   },
@@ -34,16 +32,14 @@
   },
   "keywords": [],
   "author": "",
-  "contributors": [
-    "Yudong Zhu <zhuyudong@aliyun.com>"
-  ],
+  "contributors": ["Yudong Zhu <zhuyudong@aliyun.com>"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/turing-fe/kunlun-schematics/issues"
   },
   "homepage": "https://github.com/turing-fe/kunlun-schematics#readme",
   "devDependencies": {
-    "@kunlunjs/fabric": "^0.1.0",
+    "@kunlunjs/fabric": "^0.2.2",
     "@types/eslint": "^8.4.1",
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.4.1",
@@ -76,23 +72,11 @@
   },
   "schematics": "./dist/collection.json",
   "nyc": {
-    "include": [
-      "src"
-    ],
-    "exclude": [
-      "node_modules",
-      "test"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "text-summary",
-      "html"
-    ],
+    "include": ["src"],
+    "exclude": ["node_modules", "test"],
+    "extension": [".ts"],
+    "require": ["ts-node/register"],
+    "reporter": ["text-summary", "html"],
     "sourceMap": true,
     "instrument": true
   }

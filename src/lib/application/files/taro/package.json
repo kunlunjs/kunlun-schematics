@@ -28,41 +28,28 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch"
   },
-  "browserslist": [
-    "last 3 versions",
-    "Android >= 4.1",
-    "ios >= 8"
-  ],
+  "browserslist": ["last 3 versions", "Android >= 4.1", "ios >= 8"],
   "author": "",
   "dependencies": {
-    "@babel/runtime": "^7.7.7",
-    "@tarojs/components": "3.4.2",
-    "@tarojs/plugin-framework-react": "3.4.2",
-    "@tarojs/react": "3.4.2",
-    "@tarojs/runtime": "3.4.2",
-    "@tarojs/taro": "3.4.2",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "@babel/runtime": "^7.17.9",
+    "@tarojs/components": "3.4.8",
+    "@tarojs/plugin-framework-react": "3.4.8",
+    "@tarojs/react": "3.4.8",
+    "@tarojs/runtime": "3.4.8",
+    "@tarojs/taro": "3.4.8",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@tarojs/mini-runner": "3.4.2",
-    "@tarojs/plugin-react-devtools": "^3.4.2",
-    "@tarojs/webpack-runner": "3.4.2",
-    "@types/eslint": "^8.4.1",
-    "@types/prettier": "^2.6.0",
-    "@types/react": "^17.0.2",
-    "@types/webpack-env": "^1.13.6",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
-    "babel-preset-taro": "3.4.2",
-    "eslint": "^6.8.0",
-    "eslint-config-taro": "3.4.2",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-react": "^7.8.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.6.2",
-    "stylelint": "^14.7.1",
-    "typescript": "^4.1.0"
+    "@babel/core": "^7.17.9",
+    "@kunlunjs/fabric": "^0.2.2",
+    "@tarojs/mini-runner": "3.4.8",
+    "@tarojs/plugin-react-devtools": "^3.4.8",
+    "@tarojs/webpack-runner": "3.4.8",
+    "@types/react": "^18.0.8",
+    "@types/webpack-env": "^1.16.4",
+    "babel-preset-taro": "3.4.8",
+    "eslint-config-taro": "3.4.8",
+    "typescript": "^4.6.3"
   }
 }

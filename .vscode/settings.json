@@ -1,0 +1,74 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "strings": true,
+    "comments": true
+  },
+  "css.validate": false,
+  "less.validate": false,
+  // "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules", "*.xml", "*.XML"],
+  "todo-tree.filtering.ignoreGitSubmodules": true,
+  "todohighlight.keywords": [],
+  "todo-tree.tree.showCountsInTree": true,
+  "todohighlight.keywordsPattern": "TODO:|FIXME:|NOTE:|\\(([^)]+)\\)",
+  "todohighlight.defaultStyle": {},
+  "todohighlight.isEnable": false,
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "icon": "bug"
+      // "foreground": "#F56C6C",
+      // "type": "line"
+    },
+    "FIXME": {
+      "icon": "flame"
+      // "foreground": "#FF9800",
+      // "type": "line"
+    },
+    "TODO": {
+      // "foreground": "#FFEB38",
+      // "type": "line"
+    },
+    "NOTE": {
+      "icon": "note"
+      // "foreground": "#67C23A",
+      // "type": "line"
+    },
+    "INFO": {
+      "icon": "info"
+      // "foreground": "#909399",
+      // "type": "line"
+    },
+    "TAG": {
+      "icon": "tag"
+      // "foreground": "#409EFF",
+      // "type": "line"
+    },
+    "HACK": {
+      "icon": "versions"
+      // "foreground": "#E040FB",
+      // "type": "line"
+    },
+    "XXX": {
+      "icon": "unverified"
+      // "foreground": "#E91E63",
+      // "type": "line"
+    }
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "INFO",
+    "NOTE",
+    "TAG",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.general.statusBar": "total"
+}
